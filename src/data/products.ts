@@ -1,0 +1,323 @@
+import type { Product, Category, Collection, Testimonial } from '@/types';
+
+export const products: Product[] = [
+  {
+    id: 'sig-hoodie-black',
+    name: 'Signature Logo Hoodie',
+    price: 189,
+    category: 'Hoodies',
+    collection: 'core',
+    description: 'Our signature oversized hoodie, crafted from 450gsm heavyweight cotton fleece. Features dropped shoulders, a spacious kangaroo pocket, and subtle embroidered branding. The brushed interior provides unmatched warmth and comfort. Designed for an intentionally oversized fit.',
+    shortDescription: 'Heavyweight 450gsm cotton fleece. Relaxed oversized fit with dropped shoulders. Brushed interior for warmth.',
+    images: ['/images/products/hoodie-black.jpg', '/images/carousel/hoodie.jpg'],
+    colors: [
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Cream', hex: '#F5F0E8' },
+      { name: 'Navy', hex: '#1A2B4A' },
+      { name: 'Burgundy', hex: '#6B2737' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    isBestseller: true,
+    rating: 4.9,
+    reviewCount: 328,
+    fabric: '100% Combed Cotton, 450gsm',
+    care: ['Machine wash cold', 'Do not bleach', 'Tumble dry low', 'Cool iron if needed'],
+    modelInfo: 'Model is 6\'1" wearing size L',
+  },
+  {
+    id: 'pique-polo-cream',
+    name: 'Premium Pique Polo',
+    price: 129,
+    category: 'T-Shirts',
+    collection: 'core',
+    description: 'Elevated polo shirt in premium pique cotton. Structured collar, mother-of-pearl buttons, and a tailored fit that bridges casual and refined. The fabric softens with each wash while maintaining its shape.',
+    shortDescription: 'Premium pique cotton with structured collar. Tailored fit, mother-of-pearl buttons.',
+    images: ['/images/products/polo-cream.jpg'],
+    colors: [
+      { name: 'Cream', hex: '#F5F0E8' },
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Navy', hex: '#1A2B4A' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    isBestseller: true,
+    rating: 4.8,
+    reviewCount: 186,
+    fabric: '100% Premium Pique Cotton, 280gsm',
+    care: ['Machine wash cold', 'Do not bleach', 'Hang dry recommended', 'Cool iron'],
+    modelInfo: 'Model is 6\'0" wearing size M',
+  },
+  {
+    id: 'relaxed-joggers-charcoal',
+    name: 'Relaxed Fit Joggers',
+    price: 149,
+    category: 'Pants',
+    collection: 'core',
+    description: 'Essential relaxed joggers with a tapered leg and elasticated cuffs. Made from mid-weight cotton fleece with a brushed interior. Features an adjustable drawstring waist and discreet side pockets.',
+    shortDescription: 'Mid-weight cotton fleece with tapered leg. Adjustable drawstring waist.',
+    images: ['/images/products/joggers-charcoal.jpg', '/images/carousel/joggers.jpg'],
+    colors: [
+      { name: 'Charcoal', hex: '#3A3A3A' },
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Cream', hex: '#F5F0E8' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    isBestseller: true,
+    rating: 4.7,
+    reviewCount: 245,
+    fabric: '100% Cotton Fleece, 380gsm',
+    care: ['Machine wash cold', 'Do not bleach', 'Tumble dry low', 'Do not iron print'],
+    modelInfo: 'Model is 6\'1" wearing size M',
+  },
+  {
+    id: 'essential-crew-gray',
+    name: 'Essential Crewneck',
+    price: 139,
+    category: 'Hoodies',
+    collection: 'core',
+    description: 'The perfect crewneck sweatshirt. Clean, minimal, and endlessly versatile. Crafted from soft cotton fleece with ribbed collar, cuffs, and hem. A true everyday essential.',
+    shortDescription: 'Soft cotton fleece crewneck. Ribbed details. Minimal everyday essential.',
+    images: ['/images/products/crewneck-gray.jpg', '/images/carousel/crewneck.jpg'],
+    colors: [
+      { name: 'Heather Gray', hex: '#9A9A9A' },
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Cream', hex: '#F5F0E8' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    isBestseller: true,
+    rating: 4.8,
+    reviewCount: 412,
+    fabric: '100% Cotton Fleece, 380gsm',
+    care: ['Machine wash cold', 'Do not bleach', 'Tumble dry low'],
+    modelInfo: 'Model is 5\'11" wearing size M',
+  },
+  {
+    id: 'puffer-jacket-black',
+    name: 'Heavyweight Puffer Jacket',
+    price: 349,
+    category: 'Jackets',
+    collection: 'aw25',
+    description: 'Our most substantial outerwear piece. This heavyweight puffer features a water-resistant shell, premium down insulation, and a sculptural oversized silhouette. Built for the coldest urban environments.',
+    shortDescription: 'Water-resistant shell with premium down insulation. Sculptural oversized silhouette.',
+    images: ['/images/products/puffer-black.jpg'],
+    colors: [
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Navy', hex: '#1A2B4A' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    isNew: true,
+    rating: 4.9,
+    reviewCount: 67,
+    fabric: '100% Nylon shell, 90/10 Down fill',
+    care: ['Professional clean only', 'Do not wash', 'Do not bleach'],
+    modelInfo: 'Model is 6\'0" wearing size L',
+  },
+  {
+    id: 'overshirt-navy',
+    name: 'Structured Overshirt',
+    price: 219,
+    category: 'Jackets',
+    collection: 'aw25',
+    description: 'A versatile layering piece that functions as both shirt and jacket. Cut from a substantial cotton twill with a structured collar, dual chest pockets, and corozo buttons. Sharp enough for the office, relaxed enough for the weekend.',
+    shortDescription: 'Cotton twill overshirt with dual chest pockets. Versatile layering piece.',
+    images: ['/images/products/overshirt-navy.jpg', '/images/carousel/overshirt.jpg'],
+    colors: [
+      { name: 'Navy', hex: '#1A2B4A' },
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Olive', hex: '#4A4A3A' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    isNew: true,
+    rating: 4.8,
+    reviewCount: 94,
+    fabric: '100% Cotton Twill, 320gsm',
+    care: ['Machine wash cold', 'Do not bleach', 'Hang dry', 'Warm iron'],
+    modelInfo: 'Model is 6\'2" wearing size L',
+  },
+  {
+    id: 'denim-jacket-indigo',
+    name: 'Washed Denim Jacket',
+    price: 279,
+    category: 'Jackets',
+    collection: 'aw25',
+    description: 'A modern take on the classic denim jacket. Vintage indigo wash with subtle distressing, raw hem details, and our signature metal hardware. Cut for a relaxed, boxy fit that layers comfortably.',
+    shortDescription: 'Vintage indigo wash with subtle distressing. Relaxed boxy fit.',
+    images: ['/images/products/denim-jacket.jpg'],
+    colors: [
+      { name: 'Indigo', hex: '#3A4A6A' },
+      { name: 'Black', hex: '#0A0A0A' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    isNew: true,
+    rating: 4.7,
+    reviewCount: 52,
+    fabric: '100% Cotton Denim, 14oz',
+    care: ['Machine wash cold', 'Wash separately', 'Hang dry', 'Do not iron'],
+    modelInfo: 'Model is 5\'10" wearing size M',
+  },
+  {
+    id: 'ribbed-beanie-charcoal',
+    name: 'Ribbed Knit Beanie',
+    price: 59,
+    category: 'Accessories',
+    collection: 'aw25',
+    description: 'Essential ribbed beanie in a chunky merino wool blend. Double-fold cuff with subtle embroidered branding. Warm, breathable, and built to last through countless winters.',
+    shortDescription: 'Chunky merino wool blend. Double-fold cuff. Subtle branding.',
+    images: ['/images/products/beanie-charcoal.jpg'],
+    colors: [
+      { name: 'Charcoal', hex: '#3A3A3A' },
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Cream', hex: '#F5F0E8' },
+    ],
+    sizes: ['One Size'],
+    isNew: true,
+    rating: 4.6,
+    reviewCount: 138,
+    fabric: '80% Merino Wool, 20% Nylon',
+    care: ['Hand wash cold', 'Do not bleach', 'Lay flat to dry'],
+    modelInfo: 'One size fits most',
+  },
+  {
+    id: 'leather-belt-black',
+    name: 'Premium Leather Belt',
+    price: 89,
+    category: 'Accessories',
+    collection: 'core',
+    description: 'Handcrafted from full-grain Italian leather with a minimal brushed metal buckle. Clean, timeless design that pairs with everything in your wardrobe. Ages beautifully with wear.',
+    shortDescription: 'Full-grain Italian leather. Minimal brushed metal buckle.',
+    images: ['/images/products/belt-black.jpg'],
+    colors: [
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Brown', hex: '#5A3A2A' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL'],
+    isNew: true,
+    rating: 4.8,
+    reviewCount: 203,
+    fabric: '100% Full-Grain Italian Leather',
+    care: ['Wipe clean with damp cloth', 'Condition periodically'],
+    modelInfo: 'Size guide: S=30-32", M=33-35", L=36-38", XL=39-41"',
+  },
+  {
+    id: 'cargo-pants-olive',
+    name: 'Technical Cargo Pants',
+    price: 199,
+    category: 'Pants',
+    collection: 'aw25',
+    description: 'Technical cargo pants with multiple utility pockets, adjustable cuffs, and a water-resistant cotton-nylon blend. Designed for urban exploration with a refined, tapered silhouette.',
+    shortDescription: 'Water-resistant cotton-nylon blend. Multiple utility pockets. Tapered fit.',
+    images: ['/images/products/cargo-olive.jpg'],
+    colors: [
+      { name: 'Olive', hex: '#4A4A3A' },
+      { name: 'Black', hex: '#0A0A0A' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    isNew: true,
+    rating: 4.7,
+    reviewCount: 41,
+    fabric: '65% Cotton, 35% Nylon, DWR finish',
+    care: ['Machine wash cold', 'Do not bleach', 'Tumble dry low'],
+    modelInfo: 'Model is 6\'0" wearing size M',
+  },
+  {
+    id: 'bomber-jacket-black',
+    name: 'Classic Bomber Jacket',
+    price: 299,
+    category: 'Jackets',
+    collection: 'core',
+    description: 'Our interpretation of the classic bomber. Matte black nylon shell with quilted lining, ribbed collar and cuffs, and premium metal hardware. A timeless silhouette with modern proportions.',
+    shortDescription: 'Matte nylon shell with quilted lining. Premium metal hardware.',
+    images: ['/images/carousel/jacket.jpg'],
+    colors: [
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Navy', hex: '#1A2B4A' },
+    ],
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    rating: 4.8,
+    reviewCount: 156,
+    fabric: '100% Nylon, Quilted polyester lining',
+    care: ['Professional clean recommended', 'Spot clean when possible'],
+    modelInfo: 'Model is 6\'1" wearing size L',
+  },
+  {
+    id: 'hoodie-burgundy',
+    name: 'Oversized Hoodie',
+    price: 189,
+    category: 'Hoodies',
+    collection: 'aw25',
+    description: 'The same heavyweight construction as our signature hoodie, rendered in a deep, rich burgundy. A statement piece that brings warmth and color to the colder months.',
+    shortDescription: '450gsm heavyweight fleece in deep burgundy. Oversized fit.',
+    images: ['/images/carousel/burgundy.jpg'],
+    colors: [
+      { name: 'Burgundy', hex: '#6B2737' },
+      { name: 'Black', hex: '#0A0A0A' },
+      { name: 'Cream', hex: '#F5F0E8' },
+      { name: 'Navy', hex: '#1A2B4A' },
+    ],
+    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+    isNew: true,
+    rating: 4.9,
+    reviewCount: 89,
+    fabric: '100% Combed Cotton, 450gsm',
+    care: ['Machine wash cold', 'Do not bleach', 'Tumble dry low'],
+    modelInfo: 'Model is 6\'0" wearing size L',
+  },
+];
+
+export const categories: Category[] = [
+  { id: 'hoodies', name: 'Hoodies', image: '/images/categories/hoodies.jpg', slug: 'hoodies' },
+  { id: 't-shirts', name: 'T-Shirts', image: '/images/categories/tees.jpg', slug: 't-shirts' },
+  { id: 'jackets', name: 'Jackets', image: '/images/categories/jackets.jpg', slug: 'jackets' },
+  { id: 'accessories', name: 'Accessories', image: '/images/categories/accessories.jpg', slug: 'accessories' },
+];
+
+export const collections: Collection[] = [
+  { id: 'core', name: 'Core Collection', title: 'THE FOUNDATION', subtitle: 'Timeless essentials designed for everyday elevation.', image: '/images/collections/core.jpg', slug: 'core' },
+  { id: 'aw25', name: 'Autumn/Winter 2025', title: 'SEASONAL DROP', subtitle: 'Heavyweight layers for the colder months.', image: '/images/collections/aw25.jpg', slug: 'aw25' },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    quote: "The quality is unmatched. My RAIUS hoodie has been through two years of wear and still looks brand new.",
+    name: 'James R.',
+    location: 'London',
+    rating: 5,
+  },
+  {
+    id: '2',
+    quote: "Finally, a streetwear brand that understands luxury. The attention to detail in every stitch is remarkable.",
+    name: 'Sarah M.',
+    location: 'New York',
+    rating: 5,
+  },
+  {
+    id: '3',
+    quote: "Minimal, premium, and built to last. RAIUS is the only brand I trust for elevated basics.",
+    name: 'Marcus T.',
+    location: 'Sydney',
+    rating: 5,
+  },
+];
+
+export const getProductById = (id: string): Product | undefined =>
+  products.find((p) => p.id === id);
+
+export const getProductsByCategory = (category: string): Product[] =>
+  category === 'all' ? products : products.filter((p) => p.category.toLowerCase() === category.toLowerCase());
+
+export const getProductsByCollection = (collection: string): Product[] =>
+  products.filter((p) => p.collection === collection);
+
+export const getBestsellers = (): Product[] =>
+  products.filter((p) => p.isBestseller);
+
+export const getNewArrivals = (): Product[] =>
+  products.filter((p) => p.isNew);
+
+export const getRelatedProducts = (productId: string): Product[] => {
+  const product = getProductById(productId);
+  if (!product) return products.slice(0, 4);
+  return products
+    .filter((p) => p.id !== productId && p.category === product.category)
+    .slice(0, 4);
+};
